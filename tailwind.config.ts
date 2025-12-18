@@ -77,6 +77,12 @@ export default {
           200: "hsl(var(--slate-200))",
           600: "hsl(var(--slate-600))",
         },
+        hero: {
+          pink: "hsl(var(--hero-pink))",
+          purple: "hsl(var(--hero-purple))",
+          accent: "hsl(var(--hero-accent))",
+          "accent-dark": "hsl(var(--hero-accent-dark))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
