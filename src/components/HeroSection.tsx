@@ -1,5 +1,6 @@
 import { MapPin, Mail, Phone } from 'lucide-react';
 import christinePhoto from '@/assets/christine-profile.png';
+import RippleButton from './RippleButton';
 
 const HeroSection = () => {
   return (
@@ -50,33 +51,33 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 text-foreground/80 text-sm animate-slide-up delay-300">
-              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm hover-lift cursor-default">
                 <MapPin size={16} className="text-[hsl(var(--hero-accent))]" />
                 <span>Doha, Qatar</span>
               </div>
-              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm hover-lift cursor-default">
                 <Mail size={16} className="text-[hsl(var(--hero-accent))]" />
                 <span>Christine.ecarma@gmail.com</span>
               </div>
-              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm hover-lift cursor-default">
                 <Phone size={16} className="text-[hsl(var(--hero-accent))]" />
                 <span>+974 50827928</span>
               </div>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4 animate-slide-up delay-400">
-              <a
+              <RippleButton
                 href="#contact"
-                className="bg-accent-gradient text-card px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-all hover:scale-105"
+                className="bg-accent-gradient text-card px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-all hover:scale-105 active:scale-95"
               >
                 Get in Touch
-              </a>
-              <a
+              </RippleButton>
+              <RippleButton
                 href="#experience"
-                className="border-2 border-[hsl(var(--hero-accent))] text-[hsl(var(--hero-accent-dark))] px-8 py-3 rounded-full font-semibold hover:bg-[hsl(var(--hero-accent))]/10 transition-colors"
+                className="border-2 border-[hsl(var(--hero-accent))] text-[hsl(var(--hero-accent-dark))] px-8 py-3 rounded-full font-semibold hover:bg-[hsl(var(--hero-accent))]/10 transition-all active:scale-95"
               >
                 View Experience
-              </a>
+              </RippleButton>
             </div>
           </div>
 
@@ -97,7 +98,7 @@ const HeroSection = () => {
               </div>
 
               {/* Floating stat badges */}
-              <div className="absolute -top-4 -right-4 bg-card rounded-2xl px-4 py-3 shadow-lg animate-fade-in delay-300">
+              <div className="absolute -top-4 -right-4 bg-card rounded-2xl px-4 py-3 shadow-lg animate-fade-in delay-300 hover-lift">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-[hsl(var(--hero-accent))]/20 rounded-full flex items-center justify-center">
                     <span className="text-[hsl(var(--hero-accent))] text-sm">⭐</span>
@@ -109,7 +110,7 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl px-4 py-3 shadow-lg animate-fade-in delay-500">
+              <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl px-4 py-3 shadow-lg animate-fade-in delay-500 hover-lift">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-[hsl(var(--hero-accent-dark))]/20 rounded-full flex items-center justify-center">
                     <span className="text-[hsl(var(--hero-accent-dark))] text-sm">🏆</span>

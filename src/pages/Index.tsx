@@ -6,17 +6,28 @@ import SkillsSection from '@/components/SkillsSection';
 import EducationSection from '@/components/EducationSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const Index = () => {
   return (
     <main className="min-h-screen">
       <Navigation />
       <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <SkillsSection />
-      <EducationSection />
-      <ContactSection />
+      <ScrollReveal>
+        <AboutSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <ExperienceSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <SkillsSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <EducationSection />
+      </ScrollReveal>
+      <ScrollReveal delay={100}>
+        <ContactSection />
+      </ScrollReveal>
       <Footer />
     </main>
   );
