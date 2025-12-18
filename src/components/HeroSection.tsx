@@ -1,4 +1,5 @@
 import { MapPin, Mail, Phone } from 'lucide-react';
+import christinePhoto from '@/assets/christine-profile.png';
 
 const HeroSection = () => {
   return (
@@ -32,48 +33,94 @@ const HeroSection = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border-2 border-[hsl(var(--hero-accent-dark))]/10 rounded-full" />
 
       <div className="container mx-auto px-6 relative z-10 py-32">
-        <div className="max-w-4xl">
-          <p className="text-[hsl(var(--hero-accent-dark))] font-semibold tracking-wide mb-4 animate-fade-in">
-            Lead CAFM / CMMS / Helpdesk Supervisor
-          </p>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight mb-6 animate-slide-up">
-            Christine R.
-            <br />
-            <span className="text-gradient">Ecarma</span>
-          </h1>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-8 animate-slide-up delay-200">
-            14+ years of expertise in Facilities Management, CMMS Implementation, 
-            and Customer Service Excellence across multiple industries in Qatar.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left side - Content */}
+          <div>
+            <p className="text-[hsl(var(--hero-accent-dark))] font-semibold tracking-wide mb-4 animate-fade-in">
+              Lead CAFM / CMMS / Helpdesk Supervisor
+            </p>
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight mb-6 animate-slide-up">
+              Christine R.
+              <br />
+              <span className="text-gradient">Ecarma</span>
+            </h1>
+            <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-8 animate-slide-up delay-200">
+              14+ years of expertise in Facilities Management, CMMS Implementation, 
+              and Customer Service Excellence across multiple industries in Qatar.
+            </p>
 
-          <div className="flex flex-wrap gap-4 text-foreground/80 text-sm animate-slide-up delay-300">
-            <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
-              <MapPin size={16} className="text-[hsl(var(--hero-accent))]" />
-              <span>Doha, Qatar</span>
+            <div className="flex flex-wrap gap-4 text-foreground/80 text-sm animate-slide-up delay-300">
+              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                <MapPin size={16} className="text-[hsl(var(--hero-accent))]" />
+                <span>Doha, Qatar</span>
+              </div>
+              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                <Mail size={16} className="text-[hsl(var(--hero-accent))]" />
+                <span>Christine.ecarma@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                <Phone size={16} className="text-[hsl(var(--hero-accent))]" />
+                <span>+974 50827928</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
-              <Mail size={16} className="text-[hsl(var(--hero-accent))]" />
-              <span>Christine.ecarma@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
-              <Phone size={16} className="text-[hsl(var(--hero-accent))]" />
-              <span>+974 50827928</span>
+
+            <div className="mt-10 flex flex-wrap gap-4 animate-slide-up delay-400">
+              <a
+                href="#contact"
+                className="bg-accent-gradient text-card px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-all hover:scale-105"
+              >
+                Get in Touch
+              </a>
+              <a
+                href="#experience"
+                className="border-2 border-[hsl(var(--hero-accent))] text-[hsl(var(--hero-accent-dark))] px-8 py-3 rounded-full font-semibold hover:bg-[hsl(var(--hero-accent))]/10 transition-colors"
+              >
+                View Experience
+              </a>
             </div>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-4 animate-slide-up delay-400">
-            <a
-              href="#contact"
-              className="bg-accent-gradient text-card px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-all hover:scale-105"
-            >
-              Get in Touch
-            </a>
-            <a
-              href="#experience"
-              className="border-2 border-[hsl(var(--hero-accent))] text-[hsl(var(--hero-accent-dark))] px-8 py-3 rounded-full font-semibold hover:bg-[hsl(var(--hero-accent))]/10 transition-colors"
-            >
-              View Experience
-            </a>
+          {/* Right side - Photo */}
+          <div className="relative flex justify-center lg:justify-end animate-scale-in">
+            {/* Photo container with decorative elements */}
+            <div className="relative">
+              {/* Background blob behind photo */}
+              <div className="absolute -inset-8 bg-hero-blob rounded-[60%_40%_50%_50%/50%_50%_50%_50%] opacity-70" />
+              
+              {/* Photo frame */}
+              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[40%_60%_50%_50%/50%_40%_60%_50%] overflow-hidden border-4 border-card/50 shadow-2xl">
+                <img 
+                  src={christinePhoto} 
+                  alt="Christine R. Ecarma" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+
+              {/* Floating stat badges */}
+              <div className="absolute -top-4 -right-4 bg-card rounded-2xl px-4 py-3 shadow-lg animate-fade-in delay-300">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-[hsl(var(--hero-accent))]/20 rounded-full flex items-center justify-center">
+                    <span className="text-[hsl(var(--hero-accent))] text-sm">⭐</span>
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground text-lg">14+</p>
+                    <p className="text-muted-foreground text-xs">Years Exp.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl px-4 py-3 shadow-lg animate-fade-in delay-500">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-[hsl(var(--hero-accent-dark))]/20 rounded-full flex items-center justify-center">
+                    <span className="text-[hsl(var(--hero-accent-dark))] text-sm">🏆</span>
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground text-lg">CAFM</p>
+                    <p className="text-muted-foreground text-xs">Specialist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
