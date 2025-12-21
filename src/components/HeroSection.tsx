@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone } from 'lucide-react';
+import { MapPin, Mail, Phone, Download } from 'lucide-react';
 import christinePhoto from '@/assets/christine-profile.png';
 import RippleButton from './RippleButton';
 
@@ -78,6 +78,14 @@ const HeroSection = () => {
               >
                 View Experience
               </RippleButton>
+              <a
+                href="/CV_Christine_R_Ecarma.pdf"
+                download="CV_Christine_R_Ecarma.pdf"
+                className="flex items-center gap-2 bg-card border-2 border-border text-foreground px-8 py-3 rounded-full font-semibold hover:bg-secondary transition-all hover:scale-105 active:scale-95 shadow-md"
+              >
+                <Download size={18} />
+                Download CV
+              </a>
             </div>
           </div>
 
