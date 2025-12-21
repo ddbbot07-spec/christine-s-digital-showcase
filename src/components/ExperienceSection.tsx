@@ -176,10 +176,11 @@ const ExperienceCard = ({ exp, index }: { exp: typeof experiences[0]; index: num
             <span>{exp.period}</span>
           </div>
 
-          <ul className={`space-y-2 text-sm text-muted-foreground ${index % 2 === 0 ? 'md:text-right' : ''}`}>
+          <ul className="space-y-2 text-sm text-muted-foreground text-left">
             {displayedResponsibilities.map((resp, i) => (
-              <li key={i} className="leading-relaxed">
-                • {resp}
+              <li key={i} className="leading-relaxed flex items-start gap-2">
+                <span className="text-accent mt-1.5 flex-shrink-0">•</span>
+                <span>{resp}</span>
               </li>
             ))}
           </ul>
